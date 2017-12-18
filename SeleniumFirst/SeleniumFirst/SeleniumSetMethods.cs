@@ -11,30 +11,30 @@ namespace SeleniumFirst
     class SeleniumSetMethods
     {
         //Enter text
-        public static void EnterText(IWebDriver driver, string element, string value, string elementType)
+        public static void EnterText(string element, string value, Propertytype elementtype)
         {
-            if (elementType == "Id")
-                driver.FindElement(By.Id(element)).SendKeys(value);
-            if (elementType == "Name")
-                driver.FindElement(By.Name(element)).SendKeys(value);
+            if (elementtype == Propertytype.Id)
+                PropertiesCollection.driver.FindElement(By.Id(element)).SendKeys(value);
+            if (elementtype == Propertytype.Name)
+                PropertiesCollection.driver.FindElement(By.Name(element)).SendKeys(value);
         }
 
-        //Click into a button, checkbox, option etc
-        public static void click(IWebDriver driver, string element, string elementType)
+        //Click into a button, Checkbox, option etc
+        public static void Click(string element, Propertytype elementtype)
         {
-            if (elementType == "Id")
-                driver.FindElement(By.Id(element)).Click();
-            if (elementType == "Name")
-                driver.FindElement(By.Name(element)).Click();
+            if (elementtype == Propertytype.Id)
+                PropertiesCollection.driver.FindElement(By.Id(element)).Click();
+            if (elementtype == Propertytype.Name)
+                PropertiesCollection.driver.FindElement(By.Name(element)).Click();
         }
 
         //Selecting a drop down control
-        public static void selectDropDown(IWebDriver driver, string element, string value, string elementType)
+        public static void SelectDropDown(string element, string value, Propertytype elementtype)
         {
-            if (elementType == "Id")
-                new SelectElement(driver.FindElement(By.Id(element))).SelectByText(value);
-            if (elementType == "Name")
-                new SelectElement(driver.FindElement(By.Name(element))).SelectByText(value);
+            if (elementtype == Propertytype.Id)
+                new SelectElement(PropertiesCollection.driver.FindElement(By.Id(element))).SelectByText(value);
+            if (elementtype == Propertytype.Name)
+                new SelectElement(PropertiesCollection.driver.FindElement(By.Name(element))).SelectByText(value);
         }
     }
 }
