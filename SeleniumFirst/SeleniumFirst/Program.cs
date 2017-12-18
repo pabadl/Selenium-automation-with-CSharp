@@ -37,15 +37,10 @@ namespace SeleniumFirst
         [Test]
         public void ExecuteTest()
         {
-            //Find the Element
-            IWebElement element = driver.FindElement(By.Name("q"));
-
-            //Perform Operation
-            element.SendKeys("executeautomation");
-
-            Console.WriteLine("Executed Test");
-
-
+            //Title
+            SeleniumSetMethods.selectDropDown(driver, "title", "Juan", "id");
+            SeleniumSetMethods.EnterText(driver, "Initial", "algo", ""Name);
+            SeleniumSetMethods.click(driver, "button", "id");
         }
 
         [Test]
