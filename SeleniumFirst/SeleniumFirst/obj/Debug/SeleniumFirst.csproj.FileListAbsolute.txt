@@ -21,3 +21,4 @@ C:\Users\pabadl\Documents\Selenium-automation-with-CSharp\SeleniumFirst\Selenium
 C:\Users\pabadl\Documents\Selenium-automation-with-CSharp\SeleniumFirst\SeleniumFirst\bin\Debug\WebDriver.Support.xml
 C:\Users\pabadl\Documents\Selenium-automation-with-CSharp\SeleniumFirst\SeleniumFirst\obj\Debug\SeleniumFirst.exe
 C:\Users\pabadl\Documents\Selenium-automation-with-CSharp\SeleniumFirst\SeleniumFirst\obj\Debug\SeleniumFirst.pdb
+C:\Users\pabadl\Documents\Selenium-automation-with-CSharp\SeleniumFirst\SeleniumFirst\obj\Debug\SeleniumFirst.csprojResolveAssemblyReference.cache

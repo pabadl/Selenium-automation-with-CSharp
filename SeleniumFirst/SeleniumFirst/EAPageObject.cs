@@ -17,16 +17,27 @@ namespace SeleniumFirst
 
         }
 
-        [FindsBy(How = How.Name, Using = "firstname")]
+        [FindsBy(How = How.Id, Using = "TitleId")]
+        public IWebElement ddlTitle { get; set; }
+
+        [FindsBy(How = How.Name, Using = "Initial")]
+        public IWebElement InputInitial { get; set; }
+
+        [FindsBy(How = How.Id, Using = "FirstName")]
         public IWebElement InputFirstName { get; set; }
 
-        [FindsBy(How = How.Name, Using = "Lastname")]
-        public IWebElement InputLastName { get; set; }
+        [FindsBy(How = How.Id, Using = "MiddleName")]
+        public IWebElement InputMiddleName { get; set; }
 
-        [FindsBy(How = How.Id, Using = "Lastname")]
-        public IWebElement DDLContinents { get; set; }
+        [FindsBy(How = How.Name, Using = "Save")]
+        public IWebElement btnSave { get; set; }
 
-        [FindsBy(How = How.Id, Using = "submit")]
-        public IWebElement btnSubmit { get; set; }
+        public void FillUserForm(string initial, string middleName, string firstName)
+        {
+            InputInitial.SendKeys(initial);
+            InputFirstName.SendKeys(firstName);
+            InputFirstName.SendKeys(middleName);
+            btnSave.Click();
+        }
     }
 }

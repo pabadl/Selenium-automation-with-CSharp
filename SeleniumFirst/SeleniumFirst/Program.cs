@@ -28,7 +28,7 @@ namespace SeleniumFirst
             PropertiesCollection.driver = new ChromeDriver();
 
             //navigate to google page
-            PropertiesCollection.driver.Navigate().GoToUrl("http://toolsqa.com/automation-practice-form/");
+            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/Login.html");
             Console.WriteLine("Opened URL");
         }
 
@@ -36,14 +36,28 @@ namespace SeleniumFirst
         public void ExecuteTest()
         {
 
+
+
+
+            //Create a instance of LoginPageObject
+            LoginPageObject pageLogin = new LoginPageObject();
+            //Login to Application and return a  EAPageObject
+            EAPageObject pageEA = pageLogin.Login("execute", "automation");
+            //Fill User Details
+            pageEA.FillUserForm("JP", "Juan Pablo", "Abad");
+            
+            
+            /*
+             * Second way
             //Initialize the page by calling its reference
 
             EAPageObject page = new EAPageObject();
             page.InputFirstName.SendKeys("juanp");
             page.btnSubmit.Click();
-
+            */
             
             /*
+             * Firstway
             SeleniumSetMethods.EnterText("firstname", "juan", Propertytype.Name);
             SeleniumSetMethods.EnterText("lastname", "abad", Propertytype.Name);
             SeleniumSetMethods.SelectDropDown("continents", "Europe", Propertytype.Id);
