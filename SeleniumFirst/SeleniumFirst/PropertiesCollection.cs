@@ -16,6 +16,8 @@ namespace SeleniumFirst
         CssName,
         ClassName
     }
+
+    //Instancia del driver
     class PropertiesCollection
     {
         public static IWebDriver driver { get; set; }

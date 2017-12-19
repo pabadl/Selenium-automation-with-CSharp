@@ -35,7 +35,15 @@ namespace SeleniumFirst
         [Test]
         public void ExecuteTest()
         {
-            //Title
+
+            //Initialize the page by calling its reference
+
+            EAPageObject page = new EAPageObject();
+            page.InputFirstName.SendKeys("juanp");
+            page.btnSubmit.Click();
+
+            
+            /*
             SeleniumSetMethods.EnterText("firstname", "juan", Propertytype.Name);
             SeleniumSetMethods.EnterText("lastname", "abad", Propertytype.Name);
             SeleniumSetMethods.SelectDropDown("continents", "Europe", Propertytype.Id);
@@ -45,7 +53,8 @@ namespace SeleniumFirst
             Console.WriteLine("The value from the continent is: " + SeleniumGetMethods.GetTextFromDDL("continents", Propertytype.Id));
 
             SeleniumSetMethods.Click("submit", Propertytype.Id);
-        }
+            */    
+    }
 
         [Test]
         public void NextTest()
