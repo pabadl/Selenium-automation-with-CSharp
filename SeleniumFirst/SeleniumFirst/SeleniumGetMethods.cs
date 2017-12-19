@@ -11,23 +11,17 @@ namespace SeleniumFirst
     class SeleniumGetMethods
     {
 
-       public static string GetText(string element, Propertytype elementtype)
+       public static string GetText(IWebElement element)
         {
-            if (elementtype == Propertytype.Id)
-                return PropertiesCollection.driver.FindElement(By.Id(element)).GetAttribute("value");
-            if (elementtype == Propertytype.Name)
-                return PropertiesCollection.driver.FindElement(By.Name(element)).GetAttribute("value");
-            else return String.Empty;
+            return element.GetAttribute("value");
 
         }
 
-        public static string GetTextFromDDL(string element, Propertytype elementtype)
+        public static string GetTextFromDDL(IWebElement element)
         {
-            if (elementtype == Propertytype.Id)
-                return new SelectElement(PropertiesCollection.driver.FindElement(By.Id(element))).AllSelectedOptions.SingleOrDefault().Text;
-            if (elementtype == Propertytype.Name)
-                return new SelectElement(PropertiesCollection.driver.FindElement(By.Name(element))).AllSelectedOptions.SingleOrDefault().Text;
-            else return String.Empty;
+            
+                return new SelectElement(element).AllSelectedOptions.SingleOrDefault().Text;
+            
         }
     }
 }
