@@ -34,11 +34,18 @@ namespace SeleniumFirst
 
         public void FillUserForm(string initial, string middleName, string firstName)
         {
+            InputInitial.EnterText(initial);
+            InputFirstName.EnterText(firstName);
+            InputMiddleName.EnterText(middleName);
+            btnSave.Clicks();
+            /*
             SeleniumSetMethods.EnterText(InputInitial, initial);
             SeleniumSetMethods.EnterText(InputFirstName, firstName);
             SeleniumSetMethods.EnterText(InputMiddleName, middleName);
             SeleniumSetMethods.Click(btnSave);
-            /*
+            
+             * /
+             * /*
             InputInitial.SendKeys(initial);
             InputFirstName.SendKeys(firstName);
             InputMiddleName.SendKeys(middleName);

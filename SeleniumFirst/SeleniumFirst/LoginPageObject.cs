@@ -30,9 +30,9 @@ namespace SeleniumFirst
         public EAPageObject Login(string userName, string password)
         {
             //UserName
-            InputName.SendKeys(userName);
+            InputName.EnterText(userName);
             //password
-            InputPassword.SendKeys(password);
+            InputPassword.EnterText(password);
             //Click button
             btnLogin.Submit();
 
